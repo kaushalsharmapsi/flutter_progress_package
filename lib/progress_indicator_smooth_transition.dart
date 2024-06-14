@@ -80,11 +80,6 @@ class ProgressBarIndicatorController extends GetxController {
   /// The [endTime] parameter must not be null.
   ProgressBarIndicatorController({required this.endTime});
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
-
   /// Resets the value of the tween animation, causing the widget to rebuild.
   void reBuildWidget() {
     animationKey.value++;
@@ -92,9 +87,4 @@ class ProgressBarIndicatorController extends GetxController {
 
   /// Default method called after the progress animation completes, if no custom method is provided.
   void onProgressComplete() {}
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
 }
