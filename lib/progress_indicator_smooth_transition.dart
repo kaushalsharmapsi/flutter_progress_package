@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +10,10 @@ class ProgressBarIndicator extends GetView<ProgressBarIndicatorController> {
   final int? startTime;
   final RxInt endTime;
   final Color? color;
+  final Color? bgColor;
+  final double? minHeight;
   final VoidCallback? onProgressComplete;
+  final BorderRadiusGeometry? borderRadius;
 
   /// Creates a [ProgressBarIndicator].
   ///
@@ -22,7 +24,10 @@ class ProgressBarIndicator extends GetView<ProgressBarIndicatorController> {
     this.width,
     this.height,
     this.color,
+    this.bgColor,
+    this.borderRadius,
     this.startTime = 0,
+    this.minHeight,
     required this.endTime,
     this.onProgressComplete,
   }) : super(key: key);
@@ -45,6 +50,9 @@ class ProgressBarIndicator extends GetView<ProgressBarIndicatorController> {
                 return LinearProgressIndicator(
                   value: value,
                   color: color,
+                  backgroundColor: bgColor,
+                  borderRadius: borderRadius ?? BorderRadius.zero,
+                  minHeight: minHeight,
                 );
               },
               onEnd: () {
