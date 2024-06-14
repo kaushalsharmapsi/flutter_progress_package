@@ -21,4 +21,6 @@ dependencies:
     sdk: flutter
   get:
   progress_bar_indicator:
-    path: ../path_to_your_package
+
+![alt text](<Screenshot 2024-06-14 124910.png>)
+![alt text](<Screenshot 2024-06-14 124837.png>)

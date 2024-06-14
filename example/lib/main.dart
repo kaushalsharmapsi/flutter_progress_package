@@ -39,7 +39,7 @@ class _ProgressBarExampleState extends State<ProgressBarExample> {
             ProgressBarIndicator(
               width: 300,
               height: 10,
-              color: Colors.blue,
+              color: Colors.red,
               endTime: endTime,
               onProgressComplete: () {
                 // Show a snackbar when the progress is complete
